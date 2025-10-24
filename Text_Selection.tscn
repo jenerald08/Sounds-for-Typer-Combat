@@ -1,0 +1,215 @@
+[gd_scene load_steps=15 format=3 uid="uid://c7g3gw6bhf71a"]
+
+[ext_resource type="Script" uid="uid://b7ornicx4mgwp" path="res://scripts/Typing_test_script/text_selection.gd" id="1_ers73"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0cqua"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lmdh5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmdh5"]
+bg_color = Color(0.643252, 0.681302, 0.751445, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 4
+shadow_offset = Vector2(-0.005, 2.37)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t6frs"]
+bg_color = Color(0.433339, 0.476094, 0.555292, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ax2y7"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 4
+shadow_offset = Vector2(-0.005, 2.37)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47g4l"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g0jhm"]
+bg_color = Color(0.89059, 0.89059, 0.89059, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4h3q0"]
+bg_color = Color(0.529067, 0.529067, 0.529067, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ers73"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ers73"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ewwm4"]
+bg_color = Color(0.735783, 0.409435, 0.151121, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 4
+shadow_offset = Vector2(-0.005, 2.37)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n2nhb"]
+bg_color = Color(0.537602, 0.0626212, 0.0557845, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_otwlh"]
+bg_color = Color(1, 0.560702, 0.370049, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 4
+shadow_offset = Vector2(-0.005, 2.37)
+
+[node name="Text_Selection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ers73")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.651505, 0.651505, 1)
+
+[node name="ChoicesLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 208.0
+offset_right = 679.0
+offset_bottom = 632.0
+focus_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_0cqua")
+bbcode_enabled = true
+hint_underlined = false
+selection_enabled = true
+
+[node name="Start_Test" type="Button" parent="."]
+layout_mode = 0
+offset_left = 851.0
+offset_top = 501.0
+offset_right = 1003.0
+offset_bottom = 551.0
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lmdh5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lmdh5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_t6frs")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ax2y7")
+text = "Start Test"
+
+[node name="Time_Option" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 843.0
+offset_top = 208.0
+offset_right = 996.0
+offset_bottom = 245.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxFlat_47g4l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g0jhm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4h3q0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ers73")
+alignment = 1
+autowrap_mode = 3
+selected = 0
+item_count = 4
+popup/item_0/text = "1min"
+popup/item_0/id = 60
+popup/item_1/text = "2mins"
+popup/item_1/id = 120
+popup/item_2/text = "5mins"
+popup/item_2/id = 300
+popup/item_3/text = "10mins"
+popup/item_3/id = 600
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_right = 627.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 84
+text = "Typing Test"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 149.0
+offset_right = 235.0
+offset_bottom = 204.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Test Text"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 850.0
+offset_top = 160.0
+offset_right = 988.0
+offset_bottom = 208.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Duration"
+
+[node name="Add_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 591.0
+offset_top = 155.0
+offset_right = 675.0
+offset_bottom = 199.0
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lmdh5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lmdh5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_t6frs")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ax2y7")
+text = "Add"
+
+[node name="Quit_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 879.0
+offset_top = 565.0
+offset_right = 976.0
+offset_bottom = 609.0
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ers73")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ewwm4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n2nhb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_otwlh")
+text = "Quit"
+
+[connection signal="meta_clicked" from="ChoicesLabel" to="." method="_on_rich_text_label_meta_clicked"]
+[connection signal="pressed" from="Start_Test" to="." method="_on_start_test_button_pressed"]
+[connection signal="pressed" from="Quit_button" to="." method="_on_quit_button_pressed"]

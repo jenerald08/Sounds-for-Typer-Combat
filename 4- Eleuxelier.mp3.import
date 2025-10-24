@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c8m0mwp70op37"
+path="res://.godot/imported/4- Eleuxelier.mp3-37a4b7fadf11655ec2eeeeda16cbd62a.mp3str"
+
+[deps]
+
+source_file="res://assets/Music/Typing test/Game start/4- Eleuxelier.mp3"
+dest_files=["res://.godot/imported/4- Eleuxelier.mp3-37a4b7fadf11655ec2eeeeda16cbd62a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

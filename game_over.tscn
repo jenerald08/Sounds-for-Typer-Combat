@@ -1,0 +1,95 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwvngg0i0vcfe"]
+
+[ext_resource type="Script" uid="uid://db1dokxx3y4hu" path="res://scripts/Single_Player_scripts/game_over.gd" id="1_6kjg3"]
+
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource("1_6kjg3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.266667)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -198.5
+offset_top = -103.5
+offset_right = 198.5
+offset_bottom = 103.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "        Game Over"
+
+[node name="retry_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Retry"
+
+[node name="result_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Result"
+
+[node name="quit_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="ScoreBoard" type="Panel" parent="."]
+offset_left = 408.0
+offset_top = 16.0
+offset_right = 752.0
+offset_bottom = 227.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScoreBoard"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -137.0
+offset_top = -99.0
+offset_right = 137.0
+offset_bottom = 99.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 7
+
+[node name="Label" type="Label" parent="ScoreBoard/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 26
+text = "Results"
+horizontal_alignment = 1
+
+[node name="boar_kills_label" type="Label" parent="ScoreBoard/VBoxContainer"]
+layout_mode = 2
+
+[node name="boss_kills_label" type="Label" parent="ScoreBoard/VBoxContainer"]
+layout_mode = 2
+
+[node name="words_typed_label" type="Label" parent="ScoreBoard/VBoxContainer"]
+layout_mode = 2
+
+[node name="time_label" type="Label" parent="ScoreBoard/VBoxContainer"]
+layout_mode = 2
+
+[node name="close_button" type="Button" parent="ScoreBoard/VBoxContainer"]
+layout_mode = 2
+text = "Close"
+
+[connection signal="pressed" from="VBoxContainer/retry_button" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/result_button" to="." method="_on_result_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="ScoreBoard/VBoxContainer/close_button" to="." method="_on_close_button_pressed"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ont0rkgbhfi6"]
+
+[ext_resource type="Texture2D" uid="uid://ea281hi6n3hb" path="res://assets/Sprites/Character_2/Second_Hero/slash_effect.png" id="1_3f1ox"]
+[ext_resource type="Script" uid="uid://bjhj14f6bhesj" path="res://scripts/Single_Player_scripts/slash_projectile.gd" id="1_lp0ll"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lp0ll"]
+radius = 49.0
+height = 106.0
+
+[node name="SlashProjectile" type="Area2D"]
+script = ExtResource("1_lp0ll")
+max_distance = 600.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(551, 280)
+texture = ExtResource("1_3f1ox")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(578, 279)
+shape = SubResource("CapsuleShape2D_lp0ll")

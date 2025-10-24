@@ -1,0 +1,151 @@
+[gd_scene load_steps=10 format=3 uid="uid://cp80rr50bc42p"]
+
+[ext_resource type="Texture2D" uid="uid://cj7lb11xh5owu" path="res://assets/Sprites/Background/Background.png" id="1_jeyyj"]
+[ext_resource type="Script" uid="uid://cxewgrvr1o2ys" path="res://scripts/Main_menu/second_main_menu.gd" id="1_pf220"]
+[ext_resource type="AudioStream" uid="uid://dvthbsdulp1ua" path="res://assets/Music/typer combat main menu/menu_theme.mp3" id="3_pf220"]
+[ext_resource type="Script" uid="uid://ruodcfn2nnsn" path="res://scripts/Main_menu/music_player.gd" id="4_hcgdc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x6lt7"]
+texture = ExtResource("1_jeyyj")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b07fi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b07fi"]
+bg_color = Color(0.796243, 0.796243, 0.796243, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 4
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6lt7"]
+bg_color = Color(0.617455, 0.617455, 0.617455, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 4
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_siod4"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 4
+shadow_offset = Vector2(0, 2)
+
+[node name="Second_Main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 344.0
+offset_top = 309.0
+offset_right = -298.0
+offset_bottom = -174.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pf220")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -344.0
+offset_top = -308.0
+offset_right = 299.0
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_x6lt7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.445
+anchor_right = 0.445
+offset_left = -189.95
+offset_top = -150.0
+offset_right = 190.05
+offset_bottom = 121.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 13
+
+[node name="Typing_test_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 40
+theme_override_font_sizes/font_size = 42
+theme_override_styles/focus = SubResource("StyleBoxEmpty_b07fi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b07fi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x6lt7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_siod4")
+text = "Typing Test"
+
+[node name="Single_player_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 40
+theme_override_font_sizes/font_size = 42
+theme_override_styles/focus = SubResource("StyleBoxEmpty_b07fi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b07fi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x6lt7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_siod4")
+text = "Single Player"
+
+[node name="Multiplayer_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 40
+theme_override_font_sizes/font_size = 42
+theme_override_styles/focus = SubResource("StyleBoxEmpty_b07fi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b07fi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x6lt7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_siod4")
+text = "Multiplayer"
+
+[node name="Back_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 40
+theme_override_font_sizes/font_size = 42
+theme_override_styles/focus = SubResource("StyleBoxEmpty_b07fi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b07fi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x6lt7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_siod4")
+text = "Back"
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_pf220")
+volume_db = -10.0
+autoplay = true
+script = ExtResource("4_hcgdc")
+
+[connection signal="pressed" from="VBoxContainer/Typing_test_button" to="." method="_on_typing_test_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Single_player_button" to="." method="_on_single_player_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Back_button" to="." method="_on_back_button_pressed"]

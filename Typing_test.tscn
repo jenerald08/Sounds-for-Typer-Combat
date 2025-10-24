@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://22kwug6icdgl"]
+
+[ext_resource type="Script" uid="uid://btjka5i7kidmi" path="res://scripts/Typing_test_script/typing_test.gd" id="1_b5cgu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qs03"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Typing_test" type="Node2D"]
+position = Vector2(570, 306)
+script = ExtResource("1_b5cgu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -570.0
+offset_top = -305.0
+offset_right = 581.0
+offset_bottom = 340.0
+color = Color(0, 0.651505, 0.651505, 1)
+
+[node name="TypingLabel" type="RichTextLabel" parent="."]
+offset_left = -555.0
+offset_top = -294.0
+offset_right = 76.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_4qs03")
+bbcode_enabled = true
+text = "
+"
+
+[node name="TypingInput" type="TextEdit" parent="."]
+offset_left = -557.0
+offset_top = 35.0
+offset_right = 76.0
+offset_bottom = 330.0
+theme_override_font_sizes/font_size = 35
+wrap_mode = 1
+indent_wrapped_lines = true
+
+[node name="TimerLabel" type="Label" parent="."]
+offset_left = 221.0
+offset_top = -212.0
+offset_right = 452.0
+offset_bottom = -59.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 97
+text = "Time"
+
+[node name="CountdownTimer" type="Timer" parent="."]
+wait_time = 0.05
+
+[node name="ViewResultButton" type="Button" parent="."]
+visible = false
+offset_left = 206.0
+offset_top = 230.0
+offset_right = 472.0
+offset_bottom = 278.0
+theme_override_font_sizes/font_size = 30
+text = "View Result"
+
+[node name="Back_button" type="Button" parent="."]
+offset_left = 483.0
+offset_top = -288.0
+offset_right = 565.0
+offset_bottom = -244.0
+theme_override_font_sizes/font_size = 26
+text = "Back"
+
+[connection signal="pressed" from="ViewResultButton" to="." method="_on_view_result_button_pressed"]
+[connection signal="pressed" from="Back_button" to="." method="_on_back_button_pressed"]

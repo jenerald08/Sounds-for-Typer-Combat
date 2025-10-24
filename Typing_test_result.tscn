@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd07r2igahfbc"]
+
+[ext_resource type="Script" uid="uid://cyf1k7uh7c4wk" path="res://scripts/Typing_test_script/typing_test_result.gd" id="1_3bpka"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10iaw"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Typing_test_result" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3bpka")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.5
+offset_top = -322.5
+offset_right = 575.5
+offset_bottom = 322.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.651505, 0.651505, 1)
+
+[node name="ResultLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -555.5
+offset_top = -295.0
+offset_right = 555.5
+offset_bottom = 234.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_10iaw")
+
+[node name="BackToMenuButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -129.5
+offset_top = -78.0
+offset_right = 129.5
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "Back to main menu"
+
+[connection signal="pressed" from="BackToMenuButton" to="." method="_on_back_to_menu_button_pressed"]
